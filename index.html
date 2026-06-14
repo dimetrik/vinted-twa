@@ -34,49 +34,49 @@
     <h3>🎯 Vinted Sniper Pro Filters</h3>
     
     <div class="form-group">
-        <label for="catalog_id">Category / Item Type:</label>
+        <label for="catalog_id">Category / Item Type (Категория / Тип вещи):</label>
         <select id="catalog_id">
-            <option value="">Всё подряд (Без фильтра)</option>
+            <option value="">All items (Всё подряд)</option>
             
-            <optgroup label="МУЖСКОЕ (Men)">
-                <option value="5">Все мужские вещи (Общее)</option>
-                <option value="2058">Куртки / Пальто / Верхняя одежда</option>
-                <option value="2053">Худи / Свитшоты / Свитера</option>
-                <option value="2052">Футболки / Майки / Поло</option>
-                <option value="2056">Рубашки</option>
-                <option value="2054">Штаны / Джинсы / Брюки</option>
-                <option value="2055">Шорты</option>
-                <option value="2057">Костюмы / Пиджаки</option>
-                <option value="1242">Вся мужская обувь</option>
-                <option value="1244">Кроссовки (Мужские)</option>
-                <option value="1243">Ботинки / Туфли (Мужские)</option>
-                <option value="101">Аксессуары (Кепки, Ремни, Очки)</option>
-                <option value="100">Сумки / Рюкзаки / Бананки</option>
+            <optgroup label="Men (Мужское)">
+                <option value="5">All Men's Clothing (Вся мужская одежда)</option>
+                <option value="2058">Jackets & Coats (Куртки и Пальто)</option>
+                <option value="2053">Hoodies & Sweatshirts (Худи и Свитшоты)</option>
+                <option value="2052">T-shirts & Polos (Футболки и Поло)</option>
+                <option value="2056">Shirts (Рубашки)</option>
+                <option value="2054">Pants & Jeans (Штаны и Джинсы)</option>
+                <option value="2055">Shorts (Шорты)</option>
+                <option value="2057">Suits & Blazers (Костюмы и Пиджаки)</option>
+                <option value="1242">All Men's Shoes (Вся мужская обувь)</option>
+                <option value="1244">Sneakers (Кроссовки)</option>
+                <option value="1243">Boots & Shoes (Ботинки и Туфли)</option>
+                <option value="101">Accessories (Аксессуары)</option>
+                <option value="100">Bags & Backpacks (Сумки и Рюкзаки)</option>
             </optgroup>
 
-            <optgroup label="ЖЕНСКОЕ (Women)">
-                <option value="4">Все женские вещи (Общее)</option>
-                <option value="1908">Куртки / Пальто / Верхняя одежда</option>
-                <option value="1903">Худи / Свитшоты / Свитера</option>
-                <option value="1904">Футболки / Топы / Блузки</option>
-                <option value="10">Платья</option>
-                <option value="11">Юбки</option>
-                <option value="1905">Штаны / Джинсы / Леггинсы</option>
-                <option value="1906">Шорты</option>
-                <option value="16">Вся женская обувь</option>
-                <option value="1206">Кроссовки (Женские)</option>
-                <option value="1193">Ботинки / Сапоги (Женские)</option>
-                <option value="1196">Туфли / Каблуки</option>
-                <option value="19">Аксессуары</option>
-                <option value="20">Сумки / Рюкзаки</option>
+            <optgroup label="Women (Женское)">
+                <option value="4">All Women's Clothing (Вся женская одежда)</option>
+                <option value="1908">Jackets & Coats (Куртки и Пальто)</option>
+                <option value="1903">Hoodies & Sweatshirts (Худи и Свитшоты)</option>
+                <option value="1904">T-shirts & Tops (Футболки и Топы)</option>
+                <option value="10">Dresses (Платья)</option>
+                <option value="11">Skirts (Юбки)</option>
+                <option value="1905">Pants & Jeans (Штаны и Джинсы)</option>
+                <option value="1906">Shorts (Шорты)</option>
+                <option value="16">All Women's Shoes (Вся женская обувь)</option>
+                <option value="1206">Sneakers (Кроссовки)</option>
+                <option value="1193">Boots (Ботинки и Сапоги)</option>
+                <option value="1196">Heels & Shoes (Туфли и Каблуки)</option>
+                <option value="19">Accessories (Аксессуары)</option>
+                <option value="20">Bags & Backpacks (Сумки и Рюкзаки)</option>
             </optgroup>
         </select>
     </div>
 
     <div class="form-group">
-        <label for="brand_id">Brand:</label>
+        <label for="brand_id">Brand (Бренд):</label>
         <select id="brand_id">
-            <option value="">All Brands</option>
+            <option value="">All Brands (Любой бренд)</option>
             <option value="53">Nike</option>
             <option value="1225">Jordan</option>
             <option value="362">Adidas</option>
@@ -111,17 +111,17 @@
     </div>
 
     <div class="form-group">
-        <label>Price Range (€):</label>
+        <label>Price Range / Диапазон цены (€):</label>
         <div class="price-row">
-            <input type="number" id="price_min" placeholder="Min">
-            <input type="number" id="price_max" placeholder="Max">
+            <input type="number" id="price_min" placeholder="Min (От)">
+            <input type="number" id="price_max" placeholder="Max (До)">
         </div>
     </div>
 
     <div class="form-group">
-        <label for="size_clothing">Clothing Size:</label>
+        <label for="size_clothing">Clothing Size (Размер одежды):</label>
         <select id="size_clothing">
-            <option value="">Any Size</option>
+            <option value="">Any Size (Любой размер)</option>
             <option value="207">XS</option>
             <option value="208">S</option>
             <option value="209">M</option>
@@ -132,9 +132,9 @@
     </div>
 
     <div class="form-group">
-        <label for="size_shoes">Shoes Size (EU):</label>
+        <label for="size_shoes">Shoes Size / Размер обуви (EU):</label>
         <select id="size_shoes">
-            <option value="">Any Size</option>
+            <option value="">Any Size (Любой размер)</option>
             <option value="778">39</option>
             <option value="779">40</option>
             <option value="780">41</option>
@@ -147,16 +147,16 @@
     </div>
 
     <div class="form-group">
-        <label for="condition_id">Item Condition:</label>
+        <label for="condition_id">Item Condition (Состояние вещи):</label>
         <select id="condition_id">
-            <option value="">Any Condition</option>
+            <option value="">Any Condition (Любое состояние)</option>
             <option value="6">New with tags (Новое с бирками)</option>
             <option value="1">New without tags (Новое без бирок)</option>
             <option value="2">Very good (Очень хорошее)</option>
         </select>
     </div>
 
-    <button onclick="sendFilters()">Apply & Start Sniper</button>
+    <button onclick="sendFilters()">Apply & Start Sniper (Применить и запустить)</button>
 
     <script>
         let tg = window.Telegram.WebApp;

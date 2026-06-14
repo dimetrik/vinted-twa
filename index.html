@@ -31,87 +31,50 @@
     </style>
 </head>
 <body>
-    <h3>🎯 Vinted Sniper Pro Filters</h3>
+    <h3>🎯 Vinted Sniper Pro Filters (Фильтры снайпера Pro)</h3>
     
     <div class="form-group">
-        <label for="catalog_id">Category / Item Type (Категория / Тип вещи):</label>
+        <label>Category (Категория):</label>
         <select id="catalog_id">
             <option value="">All items (Всё подряд)</option>
-            
             <optgroup label="Men (Мужское)">
                 <option value="5">All Men's Clothing (Вся мужская одежда)</option>
                 <option value="2058">Jackets & Coats (Куртки и Пальто)</option>
                 <option value="2053">Hoodies & Sweatshirts (Худи и Свитшоты)</option>
                 <option value="2052">T-shirts & Polos (Футболки и Поло)</option>
-                <option value="2056">Shirts (Рубашки)</option>
                 <option value="2054">Pants & Jeans (Штаны и Джинсы)</option>
-                <option value="2055">Shorts (Шорты)</option>
-                <option value="2057">Suits & Blazers (Костюмы и Пиджаки)</option>
                 <option value="1242">All Men's Shoes (Вся мужская обувь)</option>
                 <option value="1244">Sneakers (Кроссовки)</option>
-                <option value="1243">Boots & Shoes (Ботинки и Туфли)</option>
-                <option value="101">Accessories (Аксессуары)</option>
-                <option value="100">Bags & Backpacks (Сумки и Рюкзаки)</option>
             </optgroup>
-
             <optgroup label="Women (Женское)">
                 <option value="4">All Women's Clothing (Вся женская одежда)</option>
-                <option value="1908">Jackets & Coats (Куртки и Пальто)</option>
+                <option value="1908">Jackets & Coats (Куктки и Пальто)</option>
                 <option value="1903">Hoodies & Sweatshirts (Худи и Свитшоты)</option>
                 <option value="1904">T-shirts & Tops (Футболки и Топы)</option>
-                <option value="10">Dresses (Платья)</option>
-                <option value="11">Skirts (Юбки)</option>
                 <option value="1905">Pants & Jeans (Штаны и Джинсы)</option>
-                <option value="1906">Shorts (Шорты)</option>
                 <option value="16">All Women's Shoes (Вся женская обувь)</option>
                 <option value="1206">Sneakers (Кроссовки)</option>
-                <option value="1193">Boots (Ботинки и Сапоги)</option>
-                <option value="1196">Heels & Shoes (Туфли и Каблуки)</option>
-                <option value="19">Accessories (Аксессуары)</option>
-                <option value="20">Bags & Backpacks (Сумки и Рюкзаки)</option>
             </optgroup>
         </select>
     </div>
 
     <div class="form-group">
-        <label for="brand_id">Brand (Бренд):</label>
+        <label>Brand (Бренд):</label>
         <select id="brand_id">
             <option value="">All Brands (Любой бренд)</option>
             <option value="53">Nike</option>
-            <option value="1225">Jordan</option>
             <option value="362">Adidas</option>
-            <option value="2166">Supreme</option>
-            <option value="425">Stussy</option>
             <option value="7186">Stone Island</option>
             <option value="251">Carhartt</option>
             <option value="304">The North Face</option>
-            <option value="510">Patagonia</option>
             <option value="649">Arc'teryx</option>
             <option value="88">Ralph Lauren</option>
-            <option value="255">Lacoste</option>
-            <option value="249">Tommy Hilfiger</option>
-            <option value="250">Hugo Boss</option>
-            <option value="273">Calvin Klein</option>
-            <option value="500">New Balance</option>
-            <option value="162">Asics</option>
-            <option value="54">Puma</option>
-            <option value="55">Reebok</option>
-            <option value="330">Vans</option>
-            <option value="14">Zara</option>
             <option value="214">Levi's</option>
-            <option value="238">Diesel</option>
-            <option value="224">Guess</option>
-            <option value="518">Columbia</option>
-            <option value="242">Timberland</option>
-            <option value="609">Under Armour</option>
-            <option value="228">Jack & Jones</option>
-            <option value="720">Dr. Martens</option>
-            <option value="494">Fred Perry</option>
         </select>
     </div>
 
     <div class="form-group">
-        <label>Price Range / Диапазон цены (€):</label>
+        <label>Price Range / Цена (€):</label>
         <div class="price-row">
             <input type="number" id="price_min" placeholder="Min (От)">
             <input type="number" id="price_max" placeholder="Max (До)">
@@ -119,7 +82,7 @@
     </div>
 
     <div class="form-group">
-        <label for="size_clothing">Clothing Size (Размер одежды):</label>
+        <label>Clothing Size (Размер одежды):</label>
         <select id="size_clothing">
             <option value="">Any Size (Любой размер)</option>
             <option value="207">XS</option>
@@ -127,27 +90,24 @@
             <option value="209">M</option>
             <option value="210">L</option>
             <option value="211">XL</option>
-            <option value="212">XXL</option>
         </select>
     </div>
 
     <div class="form-group">
-        <label for="size_shoes">Shoes Size / Размер обуви (EU):</label>
+        <label>Shoes Size (Размер обуви EU):</label>
         <select id="size_shoes">
             <option value="">Any Size (Любой размер)</option>
-            <option value="778">39</option>
             <option value="779">40</option>
             <option value="780">41</option>
             <option value="781">42</option>
             <option value="782">43</option>
             <option value="783">44</option>
             <option value="784">45</option>
-            <option value="785">46</option>
         </select>
     </div>
 
     <div class="form-group">
-        <label for="condition_id">Item Condition (Состояние вещи):</label>
+        <label>Condition (Состояние вещи):</label>
         <select id="condition_id">
             <option value="">Any Condition (Любое состояние)</option>
             <option value="6">New with tags (Новое с бирками)</option>

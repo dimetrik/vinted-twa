@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { font-family: sans-serif; padding: 15px; background-color: #f5f5f5; color: #333; }
+        h3 { text-align: center; margin-bottom: 20px; color: #0088cc; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+        select, input, button { 
+            width: 100%; 
+            padding: 12px; 
+            box-sizing: border-box; 
+            border-radius: 8px; 
+            border: 1px solid #ccc; 
+            font-size: 16px; 
+            background-color: white;
+        }
+        .price-row { display: flex; gap: 10px; }
+        .price-row input { width: 50%; }
+        button { 
+            background-color: #0088cc; 
+            color: white; 
+            border: none; 
+            font-weight: bold; 
+            margin-top: 20px; 
+            cursor: pointer;
+        }
+        button:active { background-color: #006699; }
+    </style>
+</head>
+<body>
+    <h3>🎯 Vinted Sniper Pro Filters</h3>
+    
+    <div class="form-group">
+        <label for="catalog_id">Category / Gender:</label>
+        <select id="catalog_id">
+            <option value="">All Categories</option>
+            <option value="5">Men (Мужское)</option>
+            <option value="4">Women (Женское)</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="brand_id">Brand:</label>
+        <select id="brand_id">
+            <option value="">All Brands</option>
+            <option value="53">Nike</option>
+            <option value="1225">Jordan</option>
+            <option value="362">Adidas</option>
+            <option value="2166">Supreme</option>
+            <option value="425">Stussy</option>
+            <option value="7186">Stone Island</option>
+            <option value="251">Carhartt</option>
+            <option value="304">The North Face</option>
+            <option value="510">Patagonia</option>
+            <option value="649">Arc'teryx</option>
+            <option value="88">Ralph Lauren</option>
+            <option value="255">Lacoste</option>
+            <option value="249">Tommy Hilfiger</option>
+            <option value="250">Hugo Boss</option>
+            <option value="273">Calvin Klein</option>
+            <option value="500">New Balance</option>
+            <option value="162">Asics</option>
+            <option value="54">Puma</option>
+            <option value="55">Reebok</option>
+            <option value="330">Vans</option>
+            <option value="14">Zara</option>
+            <option value="214">Levi's</option>
+            <option value="238">Diesel</option>
+            <option value="224">Guess</option>
+            <option value="518">Columbia</option>
+            <option value="242">Timberland</option>
+            <option value="609">Under Armour</option>
+            <option value="228">Jack & Jones</option>
+            <option value="720">Dr. Martens</option>
+            <option value="494">Fred Perry</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Price Range (€):</label>
+        <div class="price-row">
+            <input type="number" id="price_min" placeholder="Min">
+            <input type="number" id="price_max" placeholder="Max">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="size_clothing">Clothing Size:</label>
+        <select id="size_clothing">
+            <option value="">Any Size</option>
+            <option value="207">XS</option>
+            <option value="208">S</option>
+            <option value="209">M</option>
+            <option value="210">L</option>
+            <option value="211">XL</option>
+            <option value="212">XXL</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="size_shoes">Shoes Size (EU):</label>
+        <select id="size_shoes">
+            <option value="">Any Size</option>
+            <option value="778">39</option>
+            <option value="779">40</option>
+            <option value="780">41</option>
+            <option value="781">42</option>
+            <option value="782">43</option>
+            <option value="783">44</option>
+            <option value="784">45</option>
+            <option value="785">46</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="condition_id">Item Condition:</label>
+        <select id="condition_id">
+            <option value="">Any Condition</option>
+            <option value="6">New with tags (Новое с бирками)</option>
+            <option value="1">New without tags (Новое без бирок)</option>
+            <option value="2">Very good (Очень хорошее)</option>
+        </select>
+    </div>
+
+    <button onclick="sendFilters()">Apply & Start Sniper</button>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand();
+
+        function sendFilters() {
+            const data = {
+                catalog_id: document.getElementById('catalog_id').value,
+                brand_id: document.getElementById('brand_id').value,
+                price_min: document.getElementById('price_min').value,
+                price_max: document.getElementById('price_max').value,
+                size_clothing: document.getElementById('size_clothing').value,
+                size_shoes: document.getElementById('size_shoes').value,
+                condition_id: document.getElementById('condition_id').value
+            };
+            tg.sendData(JSON.stringify(data));
+            tg.close();
+        }
+    </script>
+</body>
+</html>
